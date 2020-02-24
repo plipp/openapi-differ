@@ -16,7 +16,9 @@ Compare two OpenAPI specifications(3.x) and render the difference to html file o
 
 # Maven
 
-Available on [Maven Central](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.qdesrame%22%20AND%20a%3A%22openapi-diff%22)
+This fork is not yet available on Maven Central, but you can find the origin of the fork there:
+
+[Maven Central](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.qdesrame%22%20AND%20a%3A%22openapi-diff%22)
 
 ```xml
 <dependency>
@@ -29,33 +31,7 @@ Available on [Maven Central](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%2
 # Usage
 OpenDiff can read swagger api spec from json file or http.
 
-## Command Line
-
-```bash
-$ openapi-diff --help
-usage: openapi-diff <old> <new>
-    --debug                     Print debugging information
-    --error                     Print error information
- -h,--help                      print this message
-    --header <property=value>   use given header for authorisation
-    --html <file>               export diff as html in given file
-    --info                      Print additional information
- -l,--log <level>               use given level for log (TRACE, DEBUG,
-                                INFO, WARN, ERROR, OFF). Default: ERROR
-    --markdown <file>           export diff as markdown in given file
- -o,--output <format=file>      use given format (html, markdown) for
-                                output in file
-    --off                       No information printed
-    --query <property=value>    use query param for authorisation
-    --state                     Only output diff state: no_changes,
-                                incompatible, compatible
-    --fail-on-incompatible      Fail only if API changes broke backward compatibility
-    --trace                     be extra verbose
-    --version                   print the version information and exit
-    --warn                      Print warning information
-```
-
-## Direct Invocation
+## Using the API
 
 ```java
 public class Main {
@@ -71,6 +47,7 @@ public class Main {
 ```
 
 ### Render difference
+
 ---
 #### HTML
 ```java
@@ -106,7 +83,7 @@ try {
 ### Extensions
 This project uses Java Service Provider Inteface (SPI) so additional extensions can be added. 
 
-To build your own extension, you simply need to create a `src/main/resources/META-INF/services/com.qdesrame.openapi.diff.compare.ExtensionDiff` file with the full classname of your implementation.  Your class must also implement the `com.qdesrame.openapi.diff.compare.ExtensionDiff` interface.  Then, including your library with the `openapi-diff` module will cause it to be triggered automatically.
+To build your own extension, you simply need to create a `src/main/resources/META-INF/services/io.github.plipp.openapi.diff.compare.ExtensionDiff` file with the full classname of your implementation.  Your class must also implement the `io.github.plipp.openapi.diff.compare.ExtensionDiff` interface.  Then, including your library with the `openapi-diff` module will cause it to be triggered automatically.
 
 # Example
 ### CLI Output

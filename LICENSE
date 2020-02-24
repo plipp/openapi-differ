@@ -186,7 +186,10 @@
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright [yyyy] [name of copyright owner]
+   Copyright 2020 Patricia Lipp
+
+   Copyright for portions of project qdesrame/openapi-diff are held by Quentin Desramé, 2019 as part of project plipp/openapi-differ.
+   All other copyright for project plipp/openapi-differ are held by Patricia Lipp, 2020.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

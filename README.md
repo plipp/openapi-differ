@@ -258,9 +258,9 @@ To build your own extension, you simply need to create a `src/main/resources/MET
 ```
 
 # License
-openapi-diff is originally forked from [quen2404s openapi-diff](https://github.com/quen2404/openapi-diff) released under the Apache License 2.0.
+openapi-differ is originally forked from [quen2404s openapi-diff](https://github.com/quen2404/openapi-diff) released under the Apache License 2.0.
 
 # Thanks
 
-* [Quentin Desramé](https://github.com/quen2404/) for his project [swagger-diff](https://github.com/quen2404/openapi-diff) 
+* [Quentin Desramé](https://github.com/quen2404/) for his project [openapi-diff](https://github.com/quen2404/openapi-diff) 
   who was the originator of this tool

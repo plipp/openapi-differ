@@ -12,24 +12,35 @@ import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.Parameter;
 import io.swagger.v3.oas.models.responses.ApiResponse;
 import j2html.tags.ContainerTag;
+import j2html.tags.InlineStaticResource;
+import j2html.tags.Tag;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
 public class HtmlRender implements Render {
+  protected static RefPointer<Schema> refPointer = new RefPointer<>(RefType.SCHEMAS);
 
   private String title;
-  private String linkCss;
-  protected static RefPointer<Schema> refPointer = new RefPointer<>(RefType.SCHEMAS);
+  private Tag css;
+
   protected ChangedOpenApi diff;
 
   public HtmlRender() {
-    this("Api Change Log", "http://deepoove.com/swagger-diff/stylesheets/demo.css");
+    this("Api Change Log");
   }
 
   public HtmlRender(String title, String linkCss) {
+    this(title, link().withRel("stylesheet").withHref(linkCss));
+  }
+
+  public HtmlRender(String title) {
+    this(title, InlineStaticResource.get("/style.css", InlineStaticResource.TargetFormat.CSS));
+  }
+
+  private HtmlRender(String title, Tag css) {
     this.title = title;
-    this.linkCss = linkCss;
+    this.css = css;
   }
 
   public String render(ChangedOpenApi diff) {
@@ -56,11 +67,7 @@ public class HtmlRender implements Render {
         html()
             .attr("lang", "en")
             .with(
-                head()
-                    .with(
-                        meta().withCharset("utf-8"),
-                        title(title),
-                        link().withRel("stylesheet").withHref(linkCss)),
+                head().with(meta().withCharset("utf-8"), title(title), css),
                 body()
                     .with(
                         header().with(h1(title)),

@@ -32,9 +32,7 @@ public class OpenApiDiffTest {
     List<Endpoint> newEndpoints = changedOpenApi.getNewEndpoints();
     List<Endpoint> missingEndpoints = changedOpenApi.getMissingEndpoints();
     List<ChangedOperation> changedEndPoints = changedOpenApi.getChangedOperations();
-    String html =
-        new HtmlRender("Changelog", "http://deepoove.com/swagger-diff/stylesheets/demo.css")
-            .render(changedOpenApi);
+    String html = new HtmlRender("Changelog").render(changedOpenApi);
 
     try {
       FileWriter fw = new FileWriter("target/testNewApi.html");
@@ -76,9 +74,7 @@ public class OpenApiDiffTest {
   public void testDiff() {
     ChangedOpenApi changedOpenApi = OpenApiCompare.fromLocations(OPENAPI_DOC1, OPENAPI_DOC2);
     List<ChangedOperation> changedEndPoints = changedOpenApi.getChangedOperations();
-    String html =
-        new HtmlRender("Changelog", "http://deepoove.com/swagger-diff/stylesheets/demo.css")
-            .render(changedOpenApi);
+    String html = new HtmlRender("Changelog").render(changedOpenApi);
     try {
       FileWriter fw = new FileWriter("target/testDiff.html");
       fw.write(html);

@@ -1,0 +1,170 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body,
+button, input, select, textarea /* for ie */ {
+	font: 16px/1.5 sans-serif, tahoma, arial, \5b8b\4f53;
+	font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+	font-weight: normal;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+.ks-clear:after,
+.clear:after {
+	content: "\20";
+	display: block;
+	height: 0;
+	clear: both;
+}
+.ks-clear,
+.clear {
+	*zoom: 1;
+}
+
+header {
+	background-color: #009688;
+	height: 138px;
+	line-height: 68px;
+	padding: 0 20px;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 400;
+}
+
+header h1 {
+	font-size: 28px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-weight: 700;
+	border: 1px solid #ddd;
+	display: inline-block;
+	border-radius: 2px;
+	padding: 0 4px;
+}
+
+.article {
+	padding: 20px;
+	max-width: 960px;
+	box-shadow: 0 0 4px #ccc;
+	background: #fff;
+	margin: 80px auto 0;
+}
+
+.article > div {
+	padding: 10px 10px;
+}
+
+.POST,
+.post,
+.get,
+.GET,
+.put,
+.PUT,
+.delete,
+.DELETE {
+	color: #fff;
+	padding: 4px;
+	border-radius: 2px;
+	font-size: 8px;
+	margin: 0 4px;
+	width: 40px;
+	display: inline-block;
+	text-align: center;
+}
+.POST,
+.post {
+	background-color: #0b7caf;
+}
+.get,
+.GET {
+	background-color: #009688;
+}
+.put,
+.PUT {
+	background-color: #c5862b;
+}
+.delete,
+.DELETE {
+	background-color: #f44336;
+}
+
+hr {
+	color: #dfdfdf;
+}
+
+ol > li {
+	margin: 24px;
+}
+
+ol > li > ul {
+	background-color: #504949;
+	color: #fff;
+	padding: 8px 16px;
+}
+
+ul.change > li {
+	margin: 10px 20px;
+}
+
+ul {
+	margin: 10px 0;
+}
+
+ul > li {
+	margin: 10px 0;
+}
+
+.comment {
+	color: #d8fa3c;
+	margin-left: 16px;
+	font-size: 14px;
+}
+
+.missing > s,
+.missing > del {
+	padding: 0 4px;
+}
+
+s,
+del,
+.missing,
+del.comment {
+	color: #f44336;
+}
+
+.missing > .comment {
+	color: #f44336;
+}
+
+/* Class for link show/hide article */
+.showhide {
+	color: #3e373785;
+	text-decoration: none;
+	padding: 2px;
+	font-size: 12px;
+	float: right;
+}

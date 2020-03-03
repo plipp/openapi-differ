@@ -9,7 +9,7 @@
 
     <groupId>io.github.plipp</groupId>
     <artifactId>openapi-differ</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>openapi-differ</name>
@@ -38,7 +38,7 @@
         <connection>scm:git:git://github.com/plipp/openapi-differ.git</connection>
         <developerConnection>scm:git:git@github.com:plipp/openapi-differ.git</developerConnection>
         <url>https://github.com/plipp/openapi-differ</url>
-        <tag>HEAD</tag>
+        <tag>1.0.0</tag>
     </scm>
 
     <distributionManagement>

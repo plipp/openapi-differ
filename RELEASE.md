@@ -39,8 +39,8 @@ see
 * Do the release
 ```bash
 mvn clean
-mvn release:prepare
-mvn release:perform
+mvn release:prepare -P release
+mvn release:perform -P release
 ```
 
 * Push the tag and code to your remote repo.

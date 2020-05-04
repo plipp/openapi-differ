@@ -45,7 +45,7 @@ mvn release:perform -P release
 
 * Push the tag and code to your remote repo.
 ```bash
-git push–tags
+git push --tags
 git push origin master
 ```
           

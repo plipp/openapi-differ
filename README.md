@@ -1,6 +1,6 @@
-# OpenAPI-diff 
+# OpenAPI-Differ
 
-Compare two OpenAPI specifications(3.x) and render the difference to html file or markdown file.
+Compare two OpenAPI specifications(**3.x**) and render the difference to html file or markdown file.
 
 # Requirements
 `jdk1.8+`
@@ -14,15 +14,11 @@ Compare two OpenAPI specifications(3.x) and render the difference to html file o
 
 # Maven
 
-This fork is not yet available on Maven Central, but you can find the origin of the fork there:
-
-[Maven Central](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.qdesrame%22%20AND%20a%3A%22openapi-diff%22)
-
 ```xml
 <dependency>
-    <groupId>com.qdesrame</groupId>
-    <artifactId>openapi-diff</artifactId>
-    <version>1.2.0</version>
+    <groupId>io.github.plipp</groupId>
+    <artifactId>openapi-differ</artifactId>
+    <version>1.0.0</version>
 </dependency>
 ```
 
@@ -245,7 +241,7 @@ To build your own extension, you simply need to create a `src/main/resources/MET
 ```
 
 # License
-openapi-differ is originally forked from [quen2404s openapi-diff](https://github.com/quen2404/openapi-diff) released under the Apache License 2.0.
+openapi-differ is released under the Apache License 2.0.
 
 # Thanks
 

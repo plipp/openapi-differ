@@ -1,5 +1,9 @@
 # OpenAPI-Differ
 
+**!!! Development is discontinued in favor of [OpenAPITools:openapi-diff](https://github.com/OpenAPITools/openapi-diff) !!!**
+
+<hr>
+
 Compare two OpenAPI specifications(**3.x**) and render the difference to html file or markdown file.
 
 # Requirements
